@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Baloo+2&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  background: linear-gradient(to bottom, #fff8f0, #ffe7d1);
+  color: #2c1e1e;
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s ease forwards;
+}
+
+.animate-in.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.animate-in.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  color: #8b0000;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.music-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #fff0e6;
+  border: 2px solid #d48c00;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  font-weight: bold;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff3e0;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.bengali {
+  border-left: 5px solid #ff7043;
+}
+
+.card.rajasthani {
+  border-left: 5px solid #c2185b;
+}
+
+.card.punjabi {
+  border-left: 5px solid #4caf50;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.photos img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.photos img:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.7rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #d32f2f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #9c1c1c;
+}
+
+.hidden {
+  display: none;
+}
+
+#final-message {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #6a1b1a;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #6a1b1a;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  font-size: 1.3rem;
+  display: inline-block;
+  width: 100%;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
